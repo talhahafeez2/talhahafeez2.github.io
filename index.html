@@ -1,0 +1,230 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css" type="text/css"> 
+    </head>
+
+    <script>
+        var contacts;
+        $.getJSON('./data.json', function (data) {
+            contacts = data;
+        });
+
+        function search_contact(){
+            var contacts_to_display = [];
+            var num_sel = 1;
+            document.getElementById("pagination_table").style.display = "none";
+            document.getElementById("page_numbers").innerHTML = "";
+            var contacts_table = document.getElementById("contacts_display");
+            contacts_table.style.display = "block";
+            contacts_table.innerHTML = "<tr><td></td><td>Name</td><td>DOB</td><td>Address</td><td>City</td><td>State</td><td>Zip</td><td>Email</td><td>Phone</td></tr>";
+            var num_found = 1;
+            for (var i = 0; i < contacts["data"].length; i++){
+                var first_name = document.getElementById("first_name").value;
+                var last_name = document.getElementById("last_name").value;
+                var date_of_birth = document.getElementById("date_of_birth").value;
+                var email = document.getElementById("email").value;
+                var phone = document.getElementById("phone").value;
+                var address = document.getElementById("address").value;
+                var city = document.getElementById("city").value;
+                var state = document.getElementById("state").value;
+                var zip = document.getElementById("zip").value;
+                var row_to_add = "<td><input type='checkbox' onclick=checkedbox(" + num_found + ", 1, 5) id='sel" + num_found + "'></td><td>" + 
+                    contacts["data"][i]["first_name"] + " " + 
+                    contacts["data"][i]["last_name"] + "</td><td>" + contacts["data"][i]["date_of_birth"] + 
+                    "</td><td>" + contacts["data"][i]["address"] + "</td><td>" + contacts["data"][i]["city"] + "</td><td>" + 
+                    contacts["data"][i]["state"] + "</td><td>" + contacts["data"][i]["zip"] + "</td><td>" + 
+                    contacts["data"][i]["email"] 
+                    + "</td><td>" + contacts["data"][i]["phone"] + "</td>";
+                var added = false;
+                var first_name_good = false;
+                if ((contacts["data"][i]["first_name"].toLowerCase()).includes(first_name.toLowerCase())) {
+                    first_name_good = true;
+                }
+                var last_name_good = false;
+                if ((contacts["data"][i]["last_name"].toLowerCase()).includes(last_name.toLowerCase())) {
+                    last_name_good = true;
+                }
+                var date_of_birth_good = false;
+                if ((contacts["data"][i]["date_of_birth"].toLowerCase()).includes(date_of_birth.toLowerCase())) {
+                    date_of_birth_good = true;
+                }
+                var email_good = false;
+                if ((contacts["data"][i]["email"].toLowerCase()).includes(email.toLowerCase())) {
+                    email_good = true;
+                }
+                var phone_good = false;
+                if ((contacts["data"][i]["phone"].toLowerCase()).includes(phone.toLowerCase())) {
+                    phone_good = true;
+                }
+                var address_good = false;
+                if ((contacts["data"][i]["address"].toLowerCase()).includes(address.toLowerCase())) {
+                    address_good = true;
+                }
+                var city_good = false;
+                if ((contacts["data"][i]["city"].toLowerCase()).includes(city.toLowerCase())) {
+                    city_good = true;
+                }
+                var state_good = false;
+                if ((contacts["data"][i]["state"].toLowerCase()).includes(state.toLowerCase())) {
+                    state_good = true;
+                }
+                var zip_good = false;
+                if ((contacts["data"][i]["zip"].toLowerCase()).includes(zip.toLowerCase())) {
+                    zip_good = true;
+                }
+                if (first_name_good && last_name_good && date_of_birth_good && email_good && phone_good 
+                        && address_good && city_good && state_good && zip_good) {
+                    new_row = contacts_table.insertRow(-1);
+                    new_row.innerHTML = row_to_add;
+                    num_found += 1;
+                }
+                num_sel += 1;
+            }
+            if (num_found - 1 > 5) {
+                contacts_table.style.display = "none";
+                enable_pagination(num_found);
+            }
+        }
+        
+        function enable_pagination (num_sel) {
+            var num_pages = Math.ceil((num_sel - 1) / 5);
+            var page = 0;
+            document.getElementById("page_numbers").innerHTML = "";
+            var page_numbers = "";
+            for (var i = 0; i < num_pages; i++){
+                page_numbers += "<button onclick='create_page_table(" + ((i * 5) + 1) + ", " + Math.min(((i + 1) * 5), num_sel - 1) + ")'>" + (i + 1) + "</button>";
+            }
+            document.getElementById("page_numbers").innerHTML = page_numbers;
+            create_page_table(1, 5);
+            document.getElementById("pagination_table").style.display = "block";
+        }
+
+        function create_page_table (start, end) {
+            var table = document.getElementById("pagination_table");
+            table.innerHTML = "<tr><td></td><td>Name</td><td>DOB</td><td>Address</td><td>City</td><td>State</td><td>Zip</td><td>Email</td><td>Phone</td></tr>";
+            var rows = document.getElementById("contacts_display").rows;
+            for (var i = start; i < end + 1; i++){
+                var row = document.getElementById("contacts_display").rows[i];
+                var name = row.cells[1].innerHTML;
+                var dob = row.cells[2].innerHTML;
+                var address = row.cells[3].innerHTML;
+                var city = row.cells[4].innerHTML;
+                var state = row.cells[5].innerHTML;
+                var zip = row.cells[6].innerHTML;
+                var email = row.cells[7].innerHTML;
+                var phone = row.cells[8].innerHTML;
+                var new_row = table.insertRow(-1);
+                new_row.innerHTML = '<td><input type="checkbox" onclick="checkedbox(' + i + ', ' + start + ', ' + end + ')" id="sell' + i + '"></td><td>' + 
+                    name + "</td><td>" + dob + "</td><td>" + address + "</td><td>" + city + "</td><td>" + 
+                    state + "</td><td>" + zip + "</td><td>" + email + "</td><td>" + phone + "</td>";
+            }
+        }
+
+        function checkedbox (id, start, end) {
+            var checkbox;
+            for (var i = start; i < end + 1; i++){
+                if (i != id) {
+                    console.log("sel" + i);
+                    checkbox = document.getElementById("sel" + i);
+                    checkbox.checked = false;
+                    checkbox = document.getElementById("sell" + i);
+                    checkbox.checked = false;
+                }
+            }
+            checkbox = document.getElementById("sel" + id);
+            if (checkbox.checked == true || document.getElementById("sell" + id).checked == true) {
+                var row = document.getElementById("contacts_display").rows[id];
+                var name = row.cells[1].innerHTML;
+                var dob = row.cells[2].innerHTML;
+                var address = row.cells[3].innerHTML;
+                var city = row.cells[4].innerHTML;
+                var state = row.cells[5].innerHTML;
+                var zip = row.cells[6].innerHTML;
+                var email = row.cells[7].innerHTML;
+                var phone = row.cells[8].innerHTML;
+                document.getElementById("first_name").value = name.split(" ")[0];
+                document.getElementById("last_name").value = name.split(" ")[1];
+                document.getElementById("date_of_birth").value = dob;
+                document.getElementById("email").value = email;
+                document.getElementById("phone").value = phone;
+                document.getElementById("address").value = address;
+                document.getElementById("city").value = city;
+                document.getElementById("state").value = state;
+                document.getElementById("zip").value = zip;
+            }
+        }
+
+    </script>
+
+    <body>
+        <h2>Choose a contact</h2>
+        <div>
+            <div class="search_div">
+                <h3>Search for a contact</h3>
+                <div class="form_div">
+                    <form class="search_classes">
+                        <div>
+                            <label for="first_name">First name</label>
+                            <input type="text" id="first_name" name="first_name">
+                        </div>
+                        <div>
+                            <label for="last_name">Last name</label>
+                            <input type="text" id="last_name" name="last_name" required>
+                        </div>
+                        <div>
+                            <label for="date_of_birth">Date of birth</label>
+                            <input type="date" id="date_of_birth" name="date_of_birth">
+                        </div>
+                        <div>
+                            <label for="email">Email address</label>
+                            <input type="text" id="email" name="email">
+                        </div>
+                        <div>
+                            <label for="phone">Phone number</label>
+                            <input type="text" id="phone" name="phone">
+                        </div>    
+                    </form>
+                    <form class="search_classes">
+                        <div>
+                            <label for="address">Street address</label>
+                            <input type="text" id="address" name="address">
+                        </div>
+                        <div>
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city">
+                        </div>
+                        <div>
+                            <label for="state">State</label>
+                            <input type="text" id="state" name="state">
+                        </div>
+                        <div>
+                            <label for="zip">Zip code</label>
+                            <input type="text" id="zip" name="zip">
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+        <br>
+        <div>
+            <button onclick="search_contact()">Search</button>
+        </div>
+        <br>
+        <div>
+            <table id="contacts_display">
+                <tr><td></td><td>Name</td><td>DOB</td><td>Address</td><td>City</td><td>State</td><td>Zip</td><td>Email</td><td>Phone</td></tr>
+            </table>
+            <table id="pagination_table" style="display: none">
+
+            </table>
+        </div>
+        <br>
+        <div id="page_numbers">
+
+        </div>
+    </body>
+
+
+</html>
