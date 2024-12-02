@@ -93,15 +93,20 @@
             document.getElementById("page_numbers").innerHTML = "";
             var page_numbers = "";
             for (var i = 0; i < num_pages; i++){
-                page_numbers += "<button onclick='create_page_table(" + ((i * 5) + 1) + ", " + Math.min(((i + 1) * 5), num_sel - 1) + ")'>" + (i + 1) + "</button>";
+                page_numbers += "<button id=" + (i + 1) + " onclick='create_page_table(" + (i + 1) + ", " + ((i * 5) + 1) + ", " + Math.min(((i + 1) * 5), num_sel - 1) + ")'>" + (i + 1) + "</button>";
             }
             document.getElementById("page_numbers").innerHTML = page_numbers;
-            create_page_table(1, 5);
+            create_page_table(1, 1, 5);
             document.getElementById("pagination_table").style.display = "block";
         }
 
-        function create_page_table (start, end) {
+        function create_page_table (id, start, end) {
             var table = document.getElementById("pagination_table");
+            var num_pages = document.getElementById("page_numbers").children.length;
+            for (var j = 1; j < num_pages + 1; j++){
+                document.getElementById("" + j).style.backgroundColor = "";
+            }
+            document.getElementById("" + id).style.backgroundColor = "lightblue";
             table.innerHTML = "<tr><td></td><td>Name</td><td>DOB</td><td>Address</td><td>City</td><td>State</td><td>Zip</td><td>Email</td><td>Phone</td></tr>";
             var rows = document.getElementById("contacts_display").rows;
             for (var i = start; i < end + 1; i++){
@@ -222,7 +227,6 @@
         </div>
         <br>
         <div id="page_numbers">
-
         </div>
     </body>
 
