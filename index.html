@@ -10,7 +10,7 @@
             contacts = data;
         });
 
-        function search_contact(){
+        function search_contact() {
             var contacts_to_display = [];
             var num_sel = 1;
             document.getElementById("pagination_table").style.display = "none";
@@ -29,7 +29,7 @@
                 var city = document.getElementById("city").value;
                 var state = document.getElementById("state").value;
                 var zip = document.getElementById("zip").value;
-                var row_to_add = "<td><input type='checkbox' onclick=checkedbox(" + num_found + ", 1, 5) id='sel" + num_found + "'></td><td>" + 
+                var row_to_add = '<td><input type="checkbox" onclick="checkedbox(' + num_found + ', 1, 5)" id="sel' + num_found + '"></td><td>' + 
                     contacts["data"][i]["first_name"] + " " + 
                     contacts["data"][i]["last_name"] + "</td><td>" + contacts["data"][i]["date_of_birth"] + 
                     "</td><td>" + contacts["data"][i]["address"] + "</td><td>" + contacts["data"][i]["city"] + "</td><td>" + 
@@ -128,16 +128,22 @@
 
         function checkedbox (id, start, end) {
             var checkbox;
+            console.log(id);
             for (var i = start; i < end + 1; i++){
                 if (i != id) {
                     console.log("sel" + i);
                     checkbox = document.getElementById("sel" + i);
-                    checkbox.checked = false;
+                    if (checkbox != null) {
+                        checkbox.checked = false;
+                    }
                     checkbox = document.getElementById("sell" + i);
-                    checkbox.checked = false;
+                    if (checkbox != null) {
+                        checkbox.checked = false;
+                    }
                 }
             }
             checkbox = document.getElementById("sel" + id);
+            console.log(checkbox);
             if (checkbox.checked == true || document.getElementById("sell" + id).checked == true) {
                 var row = document.getElementById("contacts_display").rows[id];
                 var name = row.cells[1].innerHTML;
