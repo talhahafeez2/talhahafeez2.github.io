@@ -128,10 +128,8 @@
 
         function checkedbox (id, start, end) {
             var checkbox;
-            console.log(id);
             for (var i = start; i < end + 1; i++){
                 if (i != id) {
-                    console.log("sel" + i);
                     checkbox = document.getElementById("sel" + i);
                     if (checkbox != null) {
                         checkbox.checked = false;
@@ -143,7 +141,6 @@
                 }
             }
             checkbox = document.getElementById("sel" + id);
-            console.log(checkbox);
             if (checkbox.checked == true || document.getElementById("sell" + id).checked == true) {
                 var row = document.getElementById("contacts_display").rows[id];
                 var name = row.cells[1].innerHTML;
