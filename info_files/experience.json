@@ -1,0 +1,16 @@
+{
+    "Web Developer:05 2024 – 08 2024,Ethics Bowl Canada:Mississauga, ON": ["Optimized a calendar website, allowing different users to access personalized information based on their admin status.", 
+        "Developed a dynamic calendar website connected with a Firebase database, enabling real-time updates based on user interactions.",
+        "Implemented an HTML table on a WordPress page, utilizing JQuery Ajax to enable front-end users to generate CSV files seamlessly."],
+    "Engineering and Procurement:05 2022 – 08 2023,Isowater Corporation:Collingwood, ON": [
+        "Created Excel extensions to process data files quickly and efficiently using Excel VBA and Python.",
+"Developed applications to remotely gather data from MySQL databases using Power Automate and Microsoft Teams.",
+"Assisted in wiring PLCs to process transmitters for gathering data about the deuterium oxide refinery.",
+"Applied HTML knowledge to create new pages on a web application to display process information.",
+"Created documents to describe the use, setup, and specifications of newly built software."],
+
+"Data Entry Clerk:07 2018 – 08 2018,Plexxis Software:Brampton, ON": [
+    "Input client financial information into company software and/or excel.",
+    "Identified errors in data entry and related issues by mentioning to supervisors for resolution."
+]
+}
