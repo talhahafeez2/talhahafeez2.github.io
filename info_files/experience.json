@@ -1,25 +1,28 @@
 {
-    "PT Package Handler:05 2024 - Present,UPS:Caledon, ON": [
+    "PT Package Handler:05/2024 - Present,UPS:Caledon, ON": [
         "Scanned packages (could be over 70 lbs) and loaded them on to trailers for shipping.",
         "Performed multiple different tasks in a very fast-paced environment.",
         "Utilized equipment to complete various tasks."
     ],
-    "Web Developer:05 2024 – 08 2024,Ethics Bowl Canada:Mississauga, ON": ["Optimized a calendar website, allowing different users to access personalized information based on their admin status.", 
-        "Developed a dynamic calendar website connected with a Firebase database, enabling real-time updates based on user interactions.",
-        "Implemented an HTML table on a WordPress page, utilizing JQuery Ajax to enable front-end users to generate CSV files seamlessly."],
-    "Engineering and Procurement:05 2022 – 08 2023,Isowater Corporation:Collingwood, ON": [
-        "Created Excel extensions to process data files quickly and efficiently using Excel VBA and Python.",
-"Developed applications to remotely gather data from MySQL databases using Power Automate and Microsoft Teams.",
-"Assisted in wiring PLCs to process transmitters for gathering data about the deuterium oxide refinery.",
-"Applied HTML knowledge to create new pages on a web application to display process information.",
-"Created documents to describe the use, setup, and specifications of newly built software."],
-"Package Handler:06 2021 - 04 2022,UPS:Caledon, ON" : [
+    "Web Developer:05/2024 – 08/2024,Ethics Bowl Canada:Mississauga, ON": [
+        "Tasked with granting access to different functionalities of a booking calendar website connected to a Firebase Database based on user status (Student, Teacher, Admin, etc.).", 
+        "Optimized the calendar website using JavaScript and HTML to dynamically change the website based on user interactions without the need to reload the webpage.",
+        "Tasked with allowing front-end users to create a CSV file in the back-end of a WordPress website automatically without allowing them access to the back-end.",
+        "Implemented an HTML table on the page, utilizing jQuery Ajax and PHP that allowed front-end users to input information and automatically generate the CSV files in the back-end seamlessly."],
+    "Engineering and Procurement:05/2022 – 08/2023,Isowater Corporation:Collingwood, ON": [
+        "Created a Python application to quickly and efficiently generate log files. Increased time efficiency of log file creation by approximately 600%.",
+"Developed flows to remotely gather data from MySQL databases using Power Automate and Teams.",
+"Assisted in wiring PLCs to process transmitters for gathering data about the deuterium oxide refinery allowing data free of errors to be stored in a database for further analysis.",
+"Utilized HTML, CSS and JavaScript to create new pages on a web application to display process information on the web for quick and easy data reports.",
+"Created WINs, FDSs and other documents describing the use, setup, and specifications of multiple software.",
+"Updated AutoCAD electrical drawings to keep them up to date with the current electrical system in the building."],
+"Package Handler:06/2021 - 04/2022,UPS:Caledon, ON" : [
     "Scanned packages (could be over 70 lbs) and loaded them on to trailers for shipping.",
     "Performed multiple different tasks in a very fast-paced environment.",
     "Utilized equipment to complete various tasks."
 ],
 
-"Data Entry Clerk:07 2018 – 08 2018,Plexxis Software:Brampton, ON": [
+"Data Entry Clerk:07/2018 – 08/2018,Plexxis Software:Brampton, ON": [
     "Input client financial information into company software and/or excel.",
     "Identified errors in data entry and related issues by mentioning to supervisors for resolution."
 ]
