@@ -25,36 +25,36 @@
 "Created a registration page that has simple inputs for the user to create a new account where on a successful user registration, the filled out fields are saved on a PostgreSQL database.",
 "Created a game stats page, which displays the number of wins and losses for the puzzle games and for the frog game specifically, instead of the losses, the number of moves is displayed."],
 
-        "Dyanmic Shift Report - VBA, MySQL, Excel:03/2023 - 06/2023,Isowater Corporation:Collingwood, ON" : [
+        "Dyanmic Shift Report - VBA & MySQL & Excel:03/2023 - 06/2023,Isowater Corporation:Collingwood, ON" : [
             "Implemented, using Excel VBA and MySQL, a dynamically changing file that updates and changes based on the date entered by a user, to generate a shift report for that day.",
             "Utilized data from a database kept on a remote desktop and manual information from the operator to calculate the Overall Equipment Effectiveness (OEE) percentage during operation that day."
         ],
 
-        "Mobile Water Refinery - Power Automate, Teams, MySQL:02/2023 - 03/2023,Isowater Corporation:Collingwood, ON" : [
+        "Mobile Water Refinery - Power Automate & Teams & MySQL:02/2023 - 03/2023,Isowater Corporation:Collingwood, ON" : [
             "Designed and Implemented a software that allows people in a teams group to obtain data from a MySQL database (kept on a remote desktop) on their preferred device without connecting to the remote desktop.",
             "Implemented using Microsoft Power Automate Teams (Cloud flows) and Microsoft Power Automate Desktop (Desktop flows).",
             "Implemented such that a single desktop flow running on a remote desktop communicates with multiple cloud flows to provide the requested data to the user in a teams group chat."
         ],
 
-        "Refinery Warnings - Power Automate, Teams, MySQL:02/2023 - 03/2023,Isowater Corporation:Collingwood, ON" : [
+        "Refinery Warnings - Power Automate & Teams & MySQL:02/2023 - 03/2023,Isowater Corporation:Collingwood, ON" : [
             "Designed and Implemented a software that warns people in a teams group chat of any alarms triggered while the refinery is in operation to keep people informed about any issues that may occur.",
             "Implemented using Power Automate Teams (Cloud flows) and Power Automate Desktop (Desktop flows).",
             "Implemented such that every 5 minutes a single desktop flow running on a remote desktop utilizes a MySQL database and communicates with the cloud flow to send any alarms triggered to a teams group chat."
         ],
 
-        "Excel HMI - MySQL, VBA, Excel:10/2022 - 02/2023,Isowater Corporation:Collingwood, ON" : [
+        "Excel HMI - MySQL & VBA & Excel:10/2022 - 02/2023,Isowater Corporation:Collingwood, ON" : [
             "Designed and Implemented an HMI on an excel file to allow employees to monitor the refinery when in operation using MySQL and Visual Basic for Applications (Excel VBA).",
             "Created to allow multiple people to monitor the refinery synchronously on different devices.",
             "Utilized a MySQL driver to pull data from a Database kept on a Remote Desktop and displayed that data in a user friendly manner allowing people to watch the data change in almost real time.",
             "Implemented a Create Graph button that would allow users to choose all the instruments (such as Temperature Transmitters, Pressure Transmitters, etc.) they would like to graph with the option of a possible secondary Y axis and it would create a new sheet with those instruments graphed against the date and time."
         ],
 
-        "Web Dashboard - HTML, JavaScript, CSS:06/2022,Isowater Corporation:Collingwood, ON": [
+        "Web Dashboard - HTML & JavaScript & CSS:06/2022,Isowater Corporation:Collingwood, ON": [
             "Optimized an online data logging website to visually display certain pieces of data as the database updated with new information.",
             "Created to make it easier for shareholders and higher ups to see how the refinery performed while in operation."
         ],
 
-        "DAGR - Python (pandas, XlsxWriter), VBA, Excel:06/2022,Isowater Corporation:Collingwood, ON" : [
+        "DAGR - Python (pandas & XlsxWriter) & VBA & Excel:06/2022,Isowater Corporation:Collingwood, ON" : [
             "Implemented software using Python (pandas, XlsxWriter) and Excel VBA that automates creating data log files quickly and efficiently.",
             "Runs on a log file pulled from a MySQL database and creates a new log file that has multiple sheets with data sorted and copied into those sheets, graphs built upon that data and any calculations required for data analysis.",
             "Created to optimize and speed up the process of log file creation. Manually creating the file took 1-2 hours for each log file where else this software only takes a couple of minutes."
