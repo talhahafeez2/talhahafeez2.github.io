@@ -1,22 +1,16 @@
 {"Honours Bachelor of Science (HBSc) | University of Toronto Mississauga": [
     "Computer Science Specialist and Mathematical Sciences Major",
     "September 2019 - April 2025",
-    "CGPA - 3.3/4.0"
+    "CGPA - 3.29/4.0",
+    "Coursework: Data Structures and Analysis, OOP, Databases, Algorithms, Systems Programming, Machine Learning, Parallel Programming, Computer Networks, Linear Algebra, Calculus, Shell Scripting."
 ],
-"(Coursera) IBM Full-Stack JavaScript Developer Professional Certificate (In Progress)": [
-    "Introduction to Software Engineering",
-    "Introduction to HTML, CSS, & JavaScript",
-    "Getting Started with Git and GitHub",
-    "JavaScript Programming Essentials",
-    "Developing Front-End Apps with React (Props, States, Hooks, Forms, Redux)",
-    "Developing Back-End Apps with Node.js and Express (Node.js, Express, Promises, Node Package Manager (npm), Callback functions)",
-    "Get Started with Cloud Native, DevOps, Agile and NoSQL"
+"[JSA-41-01] JSA - Certified Associate JavaScript Programmer - Jul 2025" : [
+    "Certified by JS Institute"
 ],
-"(Coursera) Amazon Web Services (AWS) Cloud Solutions Architect Professional Certificate" : [
+"(Coursera) Amazon Web Services (AWS) Cloud Solutions Architect Professional Certificate - Feb 2024" : [
     "AWS Cloud Technical Essentials (IAM, Amazon RDS, Amazon DynamoDB, Amazon S3, Amazon EC2, AWS Lambda, Amazon ECS)",
     "Architecting Solutions on AWS",
     "Building Data Lakes on AWS",
     "Exam Prep: AWS Certified Solutions Architect - Associate"
 ]
-
 }

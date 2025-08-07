@@ -1,9 +1,5 @@
-{ "Programming Languages/Libraries: ": "Python, SQL, JavaScript, HTML, CSS, JSON, Node.js, RESTful APIs, Java, C, VBA, PHP, React, Ladder Programming, JQuery, Pandas, Websocket, XlsxWriter",
-    "Cloud Computing: ": "Firebase, AWS (IAM, Amazon RDS, DynamoDB, S3, EC2, Lambda, ECS)",
-    "Development Tools: ": "Jira, Microsoft Power Automate, WordPress, MySQL, PostgreSQL, Git, GitHub, VirtualBox, MS Office,  MS Excel, AutoCAD, MongoDB.",
-    "Software Development": "Object-Oriented Programming (OOP), Data Structures & Algorithms, Agile Methodologies, Software Testing.",
-    "Honours Bachelor of Science (HBSc): Pursuing a Computer Science Specialist and Mathematical Sciences Major.":"",
-  "Strong problem-solving skills with a proven ability to analyze and implement efficient solutions.": "", 
-  "Excellent verbal and written communication skills, with experience documenting software and collaborating across teams.": "",
-  "Passion for continuous learning, demonstrated by self-driven completion of certifications.": "",
-  "Team-oriented mindset with adaptability and enthusiasm for collaborative software development.": ""}
+{ "Languages: ": "Python, JavaScript, TypeScript, Java, C, PHP, SQL, HTML, CSS, VBA, Ladder Logic, LaTeX.",
+    "Frameworks/Libraries: ": "React, Vue.js, Node.js, Express, jQuery, Tailwind.",
+    "Databases: ": "MySQL, PostgreSQL, MongoDB, Firebase, NoSQL.",
+    "Developer Tools: ": "Git, GitHub, Docker, AWS, Jira, Power Automate, WordPress, AutoCAD, RESTful APIs, Linux, Windows, PyCharm, VS Studio, IntelliJ, IDLE, Eclipse, Git Bash, PowerShell.",
+    "Soft Skills: ": "Communication, Teamwork, Problem-Solving, Attention to Detail, Time Management."}

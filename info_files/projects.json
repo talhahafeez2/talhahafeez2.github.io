@@ -60,12 +60,11 @@
             "Created to optimize and speed up the process of log file creation. Manually creating the file took 1-2 hours for each log file where else this software only takes a couple of minutes."
         ],
 
-    "Software Design - Java:03/2021 – 04/2021,University of Toronto:Mississauga, ON": [
-        "Created a back-end of a digital system for video games that allows users to buy or sell access to games in a group of 4.",
-        "Worked alongside a theoretical front-end interface that would provide the back-end with transaction data in the form of daily transaction text files, which contain a day’s worth of transactions and user commands.",
-    "Used by four types of users, specifically, buyers, sellers, full-standard users and admin users.",
-    "Created a product backlog that listed all the tasks needed to be done.",
-    "Updated product backlog using the Scrum process where we had to do a code sprint in which we decided which tasks would be done for that week, the person who would be in charge of the tasks and the current status of the tasks."],
+    "Video Game Digital Distribution System - Java & OOP:03/2021 – 04/2021,University of Toronto:Mississauga, ON": [
+        "Created back-end of a distribution system using OOP techniques that allows users to buy/sell games.",
+        "Designed to work alongside a theoretical front-end that provides the back-end with daily transaction files.",
+        "Used by four types of users, specifically, buyers, sellers, full-standard users and admin users.",
+        "Created and Updated product backlog that listed all the to-do tasks using the Agile methodology, Scrum, to conduct planned sprints."],
 
     "Movie Website - PHP & MySQL:01/2021,Personal:Brampton, ON": [
         "Constructed a model website after an online movies website.",
